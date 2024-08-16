@@ -1,22 +1,22 @@
 // Imports:
-'use-strict';
-import View from './view';
+"use-strict";
+import View from "./view.js";
 
 // Class:
 class ModalView extends View {
   // Variables
-  mainElement = document.querySelector('.modal-cont');
-  modal = document.querySelector('.modal');
-  overlay = document.querySelector('.overlay');
+  mainElement = document.querySelector(".modal-cont");
+  modal = document.querySelector(".modal");
+  overlay = document.querySelector(".overlay");
 
   // Event listener
   addHandlerCloseModal(handler) {
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') handler();
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") handler();
     });
-    this.overlay.addEventListener('click', function (e) {
-      if (e.target.value === 'close-modal') handler();
-      if (e.target.className.includes('overlay')) handler();
+    this.overlay.addEventListener("click", function (e) {
+      if (e.target.value === "close-modal") handler();
+      if (e.target.className.includes("overlay")) handler();
     });
   }
 
@@ -60,16 +60,16 @@ class ModalView extends View {
   }
 
   openModal() {
-    this.modal.classList.remove('hidden');
-    this.overlay.classList.remove('hidden');
+    this.modal.classList.remove("hidden");
+    this.overlay.classList.remove("hidden");
 
-    this.mainElement.scrollIntoView({ behavior: 'instant' });
+    this.mainElement.scrollIntoView({ behavior: "instant" });
   }
 
   closeModal() {
     // animate the transition and hide the element:
-    this.animateEl(this.modal, 'zoom-out', 'hidden');
-    this.animateEl(this.overlay, 'zoom-out', 'hidden');
+    this.animateEl(this.modal, "zoom-out", "hidden");
+    this.animateEl(this.overlay, "zoom-out", "hidden");
   }
 }
 export default new ModalView();

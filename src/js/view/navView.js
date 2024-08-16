@@ -1,15 +1,15 @@
 // Imports:
-'use-strict';
-import View from './view';
+"use-strict";
+import View from "./view.js";
 
 // Class:
 class NavView extends View {
   // Variables
-  mainElement = document.querySelector('.search');
+  mainElement = document.querySelector(".search");
 
   // Event listener:
   addHandlerSearch(handler) {
-    this.mainElement.addEventListener('submit', function (e) {
+    this.mainElement.addEventListener("submit", function (e) {
       e.preventDefault();
       handler();
     });

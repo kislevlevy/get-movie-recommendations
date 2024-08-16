@@ -1,6 +1,6 @@
 // Imports:
-'use-strict';
-import { MOVIE_DB_SECRET, MOVIE_DB_URL } from './config';
+"use-strict";
+import { MOVIE_DB_SECRET, MOVIE_DB_URL } from "./config.js";
 
 // State
 export const state = {
@@ -51,7 +51,7 @@ export const getSearchResults = async function () {
     // Contruct URL
     let urlData = `&s=${search}&page=${state.currentPage}`;
     if (state.query.year) urlData += `&y=${state.query.year}`;
-    if (state.query.type === 'movie' || state.query.type === 'series')
+    if (state.query.type === "movie" || state.query.type === "series")
       urlData += `&type=${state.query.type}`;
 
     // return data:

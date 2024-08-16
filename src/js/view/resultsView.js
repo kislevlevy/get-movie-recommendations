@@ -1,15 +1,15 @@
 // Imports:
-'use-strict';
-import View from './view';
+"use-strict";
+import View from "./view.js";
 
 // Class:
 class ResultsView extends View {
   // Variables
-  mainElement = document.querySelector('.cards-cont');
+  mainElement = document.querySelector(".cards-cont");
 
   // Event listener
   addHandlerResults(handler) {
-    this.mainElement.addEventListener('click', function (e) {
+    this.mainElement.addEventListener("click", function (e) {
       if (!e.target.value) return;
       handler(e.target.value);
     });

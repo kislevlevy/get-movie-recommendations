@@ -1,10 +1,10 @@
 // Imports:
-'use-strict';
-import * as model from './model';
-import modalView from './view/modalView';
-import navView from './view/navView';
-import paginationView from './view/paginationView';
-import resultsView from './view/resultsView';
+"use-strict";
+import * as model from "./model.js";
+import modalView from "./view/modalView.js";
+import navView from "./view/navView.js";
+import paginationView from "./view/paginationView.js";
+import resultsView from "./view/resultsView.js";
 
 // Veriables:
 let currentPage;
@@ -72,7 +72,7 @@ const controlPagination = function (setPage) {
       model.state.currentPage--;
       run();
     }
-  } else if (typeof setPage === 'number') {
+  } else if (typeof setPage === "number") {
     model.state.currentPage = setPage;
     run();
   }
@@ -88,7 +88,7 @@ const controlResults = async function (imdbId) {
 
     modalView.renderToElement([moreInfo]);
   } catch (err) {
-    handleError(err, modalView, 'Could not fetch more info on this title!');
+    handleError(err, modalView, "Could not fetch more info on this title!");
   }
 };
 
