@@ -38,7 +38,7 @@ To run the project locally, follow these steps:
    ```
 3. Open `index.html` in your preferred web browser.
 
-> You can also preview the application by visiting the following link: [Get Movie Recommendations](http://kislev.me/get-movie-recommendations)
+> You can also preview the application by visiting the following link: [Get Movie Recommendations](https://kislevlevy.github.io/get-movie-recommendations/)
 
 ## How to Use
 
